@@ -1,0 +1,95 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    background-color: #3ea9f5;
+    color: white;
+    font-family: sans-serif;
+}
+
+.registration-form {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+}
+
+h1 {
+    font-size: 38px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    text-align: center;
+}
+
+p{
+    margin-left: 5px;
+    font-size: 13px;
+}
+
+span {
+    font-size: 20px;
+}
+
+.column-input {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.user-info {
+    width: 42%;
+    padding: 25px 15px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+}
+
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.border {
+    border: 1px solid white;
+    margin: 15px 0;
+    padding: 4px;
+}
+
+.create-btn {
+    background-color: #28d2d0;
+    padding: 20px;
+    border: 0;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 8px;
+}
+
+a { 
+    color: white;
+
+}
+
+.sing-up-btn {
+    background-color: #dd4b39;;
+    padding: 15px;
+    border: 0;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 8px;
+}
