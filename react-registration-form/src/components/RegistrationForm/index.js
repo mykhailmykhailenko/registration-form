@@ -1,28 +1,64 @@
  import React, { Component } from 'react';
  import styles from './RegistrationForm.module.css'
+ import {Formik, Form, Field, ErrorMessage} from 'formik';
  
- class RegistrationForm extends Component {
-   
-    render() {
+function RegistrationForm (props){
+
+    const formikSubmit = (data, formikBag) => {
+        console.log(data, formikBag);
+        formikBag.resetForm();
+    }
+
+    const initialValues = {
+        firstName: '',
+        lastName: '',
+        displayName: '',
+        email: '',
+        pass: '',
+        confirmPass: ''
+    };
+    
         return (
-            
-          
-                <form className={styles["registration-form"]}>
+            <Formik 
+            initialValues={initialValues}
+            onSubmit={formikSubmit}
+            >
+                {(formikProps) => {
+                    return (
+                    <Form className={styles["registration-form"]}>
                     <div className={styles["header"]}>
                         <h1>Create an account</h1>
                         <h2>We aleays keep your name and email address private.</h2>
                     </div>
                     <div className={styles["column-input"]}>
-                        <input className={styles["user-info"]} type="text" name="first-name" placeholder="First name" required />
-                        <input className={styles["user-info"]} type="text" name="last-name" placeholder="Last name" required />
+                        <Field 
+                            className={styles["user-info"]} 
+                            name="firstName" 
+                            placeholder="First name"/>
+                        <Field  
+                            className={styles["user-info"]} 
+                            name="lastName" 
+                            placeholder="Last name" />
                     </div>
                     <div className={styles["column-input"]}>
-                        <input className={styles["user-info"]} type="text" name="display-name" placeholder="Display name" required />
-                        <input className={styles["user-info"]} type="email" name="email" placeholder="Email Address" required />
+                        <Field  
+                            className={styles["user-info"]} 
+                            name="displayName" 
+                            placeholder="Display name" />
+                        <Field  
+                            className={styles["user-info"]} 
+                            name="email" 
+                            placeholder="Email Address" required />
                     </div>
                     <div className={styles["column-input"]}>
-                        <input className={styles["user-info"]} type="password" name="pass" placeholder="Password" required />
-                        <input className={styles["user-info"]} type="password" name="confirm pass" placeholder="Confirm Password" required />
+                        <Field  
+                            className={styles["user-info"]}
+                            name="pass" 
+                            placeholder="Password" required />
+                        <Field  
+                            className={styles["user-info"]}
+                            name="confirmPass" 
+                            placeholder="Confirm Password" required />
                     </div>
                     <div className={styles["row"]}>
                         <input type="radio" name="join-as" />
@@ -39,11 +75,12 @@
                     <button className={styles["create-btn"]}>Create account</button>
                     <h2>By clicking this button, you agree to our <a href="#">Terms of Service.</a></h2>
                     <button className={styles["sing-up-btn"]}>Sing up with Google</button>
-                </form>
-         
-            
+                </Form>
+                )
+                }}
+            </Formik>   
         );
-    }
+    
  }
  
  export default RegistrationForm;

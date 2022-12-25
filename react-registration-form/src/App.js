@@ -10,10 +10,10 @@ function App() {
     <div className={styles['container']}>
     <BrowserRouter>
     
-      <ul className={styles['wrapper']}>
-          <li><Link className={styles['link']} to="/registration">Registration</Link></li>
-          <li><Link className={styles['link']} to="/login">LoginForm</Link></li> 
-      </ul>
+      <div className={styles['wrapper']}>
+          <Link className={styles['link']} to="/registration">Registration</Link>
+          <Link className={styles['link']} to="/login">LoginForm</Link>
+      </div>
     
     <Routes>
         <Route path="/registration" element={<RegistrationForm />}/>
