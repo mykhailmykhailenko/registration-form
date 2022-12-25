@@ -1,12 +1,14 @@
 .container {
     width: 100vw;
     height: 100vh;
-    
+    margin: 0;
     display: flex;
     justify-content: center;
+
     background-color: #3ea9f5;
     color: white;
     font-family: sans-serif;
+
     box-sizing: border-box;
 }
 
