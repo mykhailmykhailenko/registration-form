@@ -6,7 +6,7 @@
     render() {
         return (
             
-            <div className={styles["container"]}>
+          
                 <form className={styles["registration-form"]}>
                     <div className={styles["header"]}>
                         <h1>Create an account</h1>
@@ -40,7 +40,7 @@
                     <h2>By clicking this button, you agree to our <a href="#">Terms of Service.</a></h2>
                     <button className={styles["sing-up-btn"]}>Sing up with Google</button>
                 </form>
-            </div>
+         
             
         );
     }

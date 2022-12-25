@@ -4,7 +4,7 @@
 class LoginForm extends Component {
     render() {
         return (
-            <div className={styles["container"]}>
+            
                 <form className={styles["login-form"]}>
                     <h1>LOGIN TO YOUR ACCOUNT</h1>
                     <input className={styles["user-info"]} type="email" name="email" placeholder="Email Address" required />
@@ -19,7 +19,7 @@ class LoginForm extends Component {
                     <button className={styles["create-btn"]}>LOGIN</button>
                     <button className={styles["sing-up-btn"]}>Sing up with Google</button>
                 </form>
-            </div>
+            
         );
     }
 }

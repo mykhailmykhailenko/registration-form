@@ -1,0 +1,38 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #3ea9f5;
+   
+    color: white;
+    font-family: sans-serif;
+
+    box-sizing: border-box;
+
+    position: relative;
+
+    overflow-y:hidden;  
+    overflow-x:hidden;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: #3ea9f5;
+    padding-left: 50px;
+    padding-top: 50px;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+.link{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+
+}
